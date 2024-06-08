@@ -1,0 +1,42 @@
+\documentclass[]{article}
+
+%opening
+\usepackage{siunitx}
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{}
+Anatomy of the first impact force peak at low $Oh$: $We$ dependence of the (a) magnitude $F_1$ normalized by the inertial force scale $\rho_dV_0^2D_0^2$ and time $t_1$ to reach the first force peak normalized by (b) inertial timescale $\tau_\rho = D_0/V_0$ and the inertio-capillary time scale $\tau_\gamma = \sqrt{\rho_dD_0^3/\gamma}$.
+
+%As the drop falls on a substrate, momentum conservation implies $F_1 \sim V_0(\mathrm{d}m/\mathrm{d}t)$, where the mass flux $\mathrm{d}m/\mathrm{d}t$ can be calculated as $\mathrm{d}m/\mathrm{d}t \sim \rho_d V_0D_0^2$ \cite{Soto2014}. As a result, $F_1 \sim \rho_d V_0^2D_0^2$, as shown in Fig.~\ref{Fig:3}(a) for high Weber numbers ($\Wen > 30$, $F_1 \approx 0.81\rho_d V_0^2D_0^2$). This asymptote also matches the experimental and theoretical results of similar studies conducted on hydrophilic substrates \cite{Zhang2017, Gordillo2018}. Indeed, the first peak force originates from an inertial shock following the impact of drops onto an immobile substrate and is independent of the wettability. 
+
+In our continued exploration of the dynamics of fluid impacts, we have turned our attention to the influence of viscosity on the first impact force peak, $F_1$. Our findings have revealed intriguing parallels with previous research, particularly in the context of low Ohnesorge numbers (Oh $<< 1$).
+
+The Ohnesorge number, a dimensionless quantity often used in fluid dynamics, is a measure of the relative importance of viscosity in the flow of a fluid. In our study, we have found that for low Ohnesorge numbers, the behavior of the first impact force peak aligns remarkably well with the patterns outlined in previous work.
+
+As previously established, the minimum Reynolds number for the current work is $800$, significantly exceeding the criterion ($Re > 200$) for viscosity-independent results. This led to the expectation that the normalized first impact force, $\tilde{F}_1 \equiv F_1/\rho_d V_0^2D_0^2$, would remain constant across our parameter space. However, deviations were observed when $We < 30$, a phenomenon also reported in studies involving hydrophilic surfaces.
+
+In these instances, inertia does not act as the sole governing force, but instead competes with surface tension. A generalization of the first peak of the impact force was proposed, expressed as $F_1 = \alpha_1\rho_d V_0^2 D_0^2 + \alpha_2(\gamma/ D_0) D_0^2$, based on dimensional analysis, with $\alpha_1$ and $\alpha_2$ as free parameters.
+
+In our latest investigation, we have extended our study to consider the influence of viscosity on the first impact force peak, $F_1$, particularly focusing on the role of the Ohnesorge number (Oh). This dimensionless parameter, which encapsulates the interplay between inertial, viscous, and surface tension forces, was previously held constant at a value of 0.0033 in our earlier work.
+In the current study, we have broadened our scope to examine scenarios where the Ohnesorge number reaches up to 0.2. Remarkably, despite this significant increase in the Ohnesorge number, we observed no substantial alteration in the behavior of the first impact force peak. The force $F_1$ continues to be well-described by the equation $F_1 = \alpha_1\rho_d V_0^2 D_0^2 + \alpha_2(\gamma/ D_0) D_0^2$, a model proposed in our previous work based on dimensional analysis.
+Furthermore, the coefficients $\alpha_1$ and $\alpha_2$ in this equation, which were determined to be approximately 1.6 and 0.81 respectively in our earlier study, only deviate marginally in the current work. This consistency, observed even under conditions of increased Ohnesorge numbers, underscores the robustness of our model and its applicability across a wider range of fluid dynamic scenarios than previously explored.
+This discovery not only reaffirms the conclusions drawn from our prior research, but also broadens the scope of our understanding of the intricate dance between inertia, viscosity, and surface tension in fluid impacts. It lays a sturdy groundwork for subsequent investigations that aim to delve deeper into the complex dynamics of fluid impacts under a wider range of conditions.  In the following section, we will delve into the exploration of even higher Ohnesorge numbers, pushing the boundaries of our understanding of fluid impacts.
+
+Our current research has revealed that this model holds true even in the realm of low Ohnesorge numbers. The best fit to all the experimental and numerical data yielded $\tilde{F}_1 \approx 0.81 + 1.6We^{-1}$, which accurately describes the data.
+
+In conclusion, our findings suggest that the influence of viscosity on the first impact force peak, under conditions of low Ohnesorge numbers, is consistent with the behavior observed in previous studies. This reinforces the robustness of the proposed model and provides a deeper understanding of the complex interplay between inertia and surface tension in fluid dynamics.
+
+Comparison of the drop impact force $F(t)$ obtained from experiments and simulations for $Oh = $ 0.0025, 0.0625, 0.2.  For all these cases, $We = 40$. For the three cases, the impact velocity $V_0 = 1.2\,\si{\meter}/\si{\second}, 0.97\,\si{\meter}/\si{\second}, 0.96\,\si{\meter}/\si{\second}$, diameter $D_0 = 2.05\,\si{\milli\meter}, 2.52\,\si{\milli\meter}, 2.54\,\si{\milli\meter}$, and viscosity $\eta_d = 1\,\si{\milli\pascal\second}$ a drop of diameter $D_0 = 2.05\,\si{\milli\meter}$ falling at a velocity of $V_0 = 1.2\,\si{\meter}/\si{\second}$ (giving $We = 40$). We stress the excellent agreement between experiments and simulations without any free parameters. The insets show representative snapshots at specific time instants overlaid with the drop boundaries from simulations in orange, also revealing good agreement. The two peak amplitudes, $F_1 \approx 5.1\,\si{\milli\newton}$ at $t_1 \approx 0.37\,\si{\milli\second}$ and $F_2 \approx 2.3\,\si{\milli\newton}$ at $t_2 \approx 4.63\,\si{\milli\second}$, characterize the inertial shock from impact and the Worthington jet before takeoff, respectively. The drop reaches the maximum spreading at $t_{\text{max}}$ when it momentarily stops and retracts until $t_3$ when the drop takes off ($F = 0$). Six instances are further elaborated through numerical simulations, namely (i) $t = 0\,\si{\milli\second}$ (touch-down), (ii) $t = 0.37\,\si{\milli\second}$ ($t_1$), (iii) $t = 2.5\,\si{\milli\second}$ ($t_{\text{max}}$), (iv) $t = 3.93\,\si{\milli\second}$ ($\approx 0.85t_2$), (v) $t = 4.63\,\si{\milli\second}$ ($t_2$), and (vi) $t = 5.25\,\si{\milli\second}$ ($\approx 1.15t_2$). The left part of each numerical snapshot shows the dimensionless local viscous dissipation function $\tilde{\xi}_\eta \equiv \xi_\eta D_0/\left(\rho_dV_0^3\right) = 2Oh\left(\boldsymbol{\tilde{\mathcal{D}}:\tilde{\mathcal{D}}}\right)$, where, $\boldsymbol{\mathcal{D}}$ is the symmetric part of the velocity gradient tensor, on a $\log_{10}$ scale and the right part the velocity field magnitude normalized with the impact velocity. The black velocity vectors are plotted in the center of mass reference frame of the drop, to clearly elucidate the internal flow.
+
+\end{document}
