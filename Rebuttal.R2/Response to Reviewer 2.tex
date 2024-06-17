@@ -1,0 +1,134 @@
+%\documentclass[final]{article}
+\documentclass[]{article}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=0.75in,
+	top=0.75in,
+	right=0.75in,
+	bottom=1in,
+}
+\newcommand{\extramargin}[1]{}
+%\newcommand{\extramargin}[1]{
+	%	\setlength{\paperwidth}{250mm}
+	%	\setlength{\evensidemargin}{-15mm}
+	%	\setlength{\oddsidemargin}{-15mm}
+	%}
+\usepackage{gensymb}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{epstopdf, epsfig}
+\usepackage{amsmath}
+\usepackage[url=false,
+backend=bibtex,
+style=authoryear-comp,
+giveninits=true,
+doi=true,
+isbn=true,
+backref=false,
+dashed=false,
+maxcitenames=2,
+maxbibnames=99,
+natbib=true]{biblatex}
+\DeclareNameAlias{author}{last-first}
+\DeclareFieldFormat
+[article,inbook,incollection,inproceedings,patent,thesis,
+unpublished,techreport,misc,book]
+{title}{#1}
+\renewcommand*{\revsdnamepunct}{}
+\renewbibmacro{in:}{}
+\usepackage{xpatch}
+\xpatchbibmacro{date+extradate}{%
+	\printtext[parens]%
+}{%
+	\setunit*{\space}%
+	\printtext%
+}{}{} 
+
+
+\addbibresource{../Main/ViscousDropImpact_v2.bib}
+\nonfrenchspacing
+\setlength\parindent{0pt}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage[colorlinks,citecolor=purple]{hyperref}
+\newcommand*\blue{\textcolor{blue}}
+\newcommand*\red{\textcolor{red}}
+\newcommand{\VS}[1]{{\textcolor{orange}{#1}}}
+
+\renewcommand{\thefigure}{R\arabic{figure}}
+
+\usepackage[obeyFinal,colorinlistoftodos, textwidth=60mm, shadow]{todonotes}
+% todonotes specific macros begin!
+\newcommand{\todoInsertref}[2]{\todo[color=green!40, #1]{#2}}
+\newcommand{\todoExplaininDetails}[2]{\todo[color=orange!40, #1]{#2}}
+\newcommand{\todoUrgent}[2]{\todo[color=red!40, #1]{#2}}
+\newcommand{\todoSansUrgent}[2]{\todo[color=yellow!40, #1]{#2}}
+\extramargin
+%% todonotes specific macros end!
+
+%opening
+\title{Reply to Referee 2}
+\author{Vatsal Sanjay, Bin Zhang, Cunjing Lv, and Detlef Lohse}
+\date{}
+\begin{document}
+	
+\maketitle
+	
+\textit{The authors have made some improvements to the manuscript based on the feedback provided, however some concerns were not fully addressed, as described below. I will use the same number scheme as in the prior report for consistency. I am content with the response for points that are not re-addressed below.}
+
+We thank the referee for carefully reading our manuscript and providing valuable feedback and suggestions. We have reviewed the referee's comments and made changes based on their suggestions. Below, we offer a point-to-point reply to each of the referee's comments and include the changes made in the manuscript. The referee's comments are in italics, and our replies are in plain black. Changes in the manuscript are highlighted in orange.
+
+
+\begin{enumerate}
+	\item[$\bullet$] \textit{While I appreciate the inclusion of two additional force datasets, no new droplet shape profiles were included. For a paper that has a significant experimental component, I am surprised with the lack of direct visualization of the droplet dynamics. At minimum, I would recommend adding droplet shape profile comparisons for the two new data sets. Furthermore, these visualizations (including the one already included) should include a scale bar. Additionally, I would suggest including some experimental videos as supplementary materials.}
+	
+	\red{Yes, we can add these images. Will ask Cunjing to send them.}
+	
+	\item[$\bullet$] \textit{2. I appreciate the clarification regarding the error bars. However, a proper characterization (and description of the procedure by which they are determined) of the estimated parametric errors is still incomplete. Rather than including additional discussion, the authors reference the supplementary materials of a prior work (Zhang et al. (2022)). In reviewing this work, I cannot identify error assessments on key parameters (such as impact velocity). An error is now included on the droplet size, but there is no discussion of how drop size is determined nor how this error determined. Additionally, the related point regarding horizontal error bars was not addressed. Given that there is no length limit, I would suggest the authors include all details in the present manuscript rather than referring to incomplete discussions in prior work. (Also a minor point: the new horizontal line associated with the force sensor resolution should be described in the caption.)}
+	
+	\red{Will need Cunjing's help with the experimental setup details and error quantification.}
+	
+	\item[$\bullet$] \textit{3.}
+	\begin{itemize}
+		\renewcommand\labelitemi{--}
+		\item \textit{In the experimental methods, the authors now describe that the Bond number is fixed at 1. Given the change in fluid properties between different solutions (with fixed droplet size), this cannot be the case. This needs to be made more precise. Furthermore, in the authors' prior work (Zhang et al. (2022)), it is mentioned that the Bo is fixed at 0.5 in simulation for similar experimental parameters. Why the change?}
+		
+		\red{To discuss: The results are Bond invariant in the leading order. Therefore, we chose a representative value of Bond = 1: this if for a diameter $0.00256\,\si{\milli\meter}$, density $1000\,\si{\kilogram/\meter^3}$, acceleration due to gravity $10\,\si{\meter/\second^2}$, surface tension $0.06\,\si{\newton/\meter}$. The dimensionless number that matter is the Froude number $Fr = V^2/gD_0 = We/Bo$ which is larger than 1 throughout the paper. The difference as compared to \citet{zhang2022impact} is in the length scale (2 mm in PRL and 2.56 mm in this work).} 
+		
+		\item \textit{By now providing the drop size used, the Oh and Bo now can be used to define the parameters. However, it is not clear that the non-dimensional values are correct. For instance, Figures 2 and 3 both mention experimental conditions where Oh = 0.0025 whereas apparently different droplet sizes were used (2.05 mm in Figure 2, and 2.54 mm in Figure 3). Was a different fluid used between these figures such that the Oh could be held fixed? To clarify all of these issues, and for the ease of the readers, I strongly suggest the authors add the dimensional parameters for all experiments to the captions (as they have now done for Figure 2), an appendix, or make experimental data available in a supplementary data set.}
+		
+		\item \textit{Given the significant amount of data overlap in the various figures (e.g. Figure 3(b)), I am more convinced now that the parameters and raw data need to be provided in a supplementary dataset for reproducibility and to facilitate further comparisons.}
+		
+		\item \textit{The authors mention that their mixtures maintain ``a fairly constant surface tension and density, around 61 mN/m and 1000 kg/m$^3$, respectively.'' Since the values are now clearly specified in the table now, what is the meaning of these particular characteristic values which do in fact vary by around 20\%?}
+	\end{itemize}
+	
+	\item[$\bullet$] \textit{5. The new title is more appropriate, but it should be mentioned in the title that there are specific restrictions/assumptions on the substrate (i.e. non-wetting), as the results are likely to depend on the surface wettability.}
+	
+	\red{The first impact peak is independent of wetability. The second peak, of course, depends on wetability as it only shows up on non-wetting surfaces.}
+	
+	\item[$\bullet$] \textit{7. If the experiment is repeatable, for a given drop height, the oscillation phase at which the droplet arrives at the surface should not vary, and thus is unlikely to be captured by the error bars as claimed. Some additional quantification of the non-sphericity of the droplets should be included.}
+	
+	\item[$\bullet$] \textit{11. While moving to a different fluid is one viable option, using smaller radii could also allow for smaller $Oh$.}
+	
+	\red{tbh: (not to be sent to reviewer) I thought that it was obvious. If we decreased the $r$, we would get higher $Oh$ but not too much as $Oh$ depends weakly on $r$ ($1/\sqrt{r})$ whereas it depends linearly on $\eta$. Also, using silicone oil would require special surface which is perhaps more important to remember. }
+
+	Using smaller radii could also allow for larger $Oh$. We have added this in the revised manuscript. 
+	
+	\S~\red{2.1:}\\
+	\VS{We note that using liquids such as silicone oil can provide a broader range of viscosity variation when paired with a superamphiphobic substrate \citep{deng2012candle}. Additionally, employing drops of smaller radii facilitates the exploration of higher Ohnesorge numbers ($Oh$).}
+	
+	\item[$\bullet$] \textit{13. While the authors have done a good job clarifying their theoretical arguments, I am not sure that citation to unpublished (and currently inaccessible) work by the same group is appropriate or really necessary.}
+	
+	\red{Easily fixed: we can submit the SL theory on arxiv before we resubmit this work. :)}
+	
+\end{enumerate}
+
+\textit{Regardless of the remaining critical feedback, I still believe this work is valuable and will be of interest to the community working on impacting droplets. However, I still have reservations on the current version given the persistent lack of details on the experiments.}
+
+We appreciate the reviewer's belief in the value and interest of our work to the impacting droplets community. We acknowledge the reservations regarding the level of experimental detail. We have that the details added in the revised manuscript will address the reservation of the reviewer. 
+	
+\printbibliography[title=References]
+\end{document}
