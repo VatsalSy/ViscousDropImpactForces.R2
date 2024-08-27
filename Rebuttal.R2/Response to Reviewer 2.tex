@@ -58,6 +58,11 @@ unpublished,techreport,misc,book]
 \newcommand*\red{\textcolor{red}}
 \newcommand{\VS}[1]{{\textcolor{orange}{#1}}}
 
+\newcommand{\oo}{\color{magenta} \normalfont}
+\newcommand{\bb}{\color{black} \normalfont}
+
+\newcommand{\vs}{\color{orange} \normalfont}
+
 \renewcommand{\thefigure}{R\arabic{figure}}
 
 \usepackage[obeyFinal,colorinlistoftodos, textwidth=60mm, shadow]{todonotes}
@@ -79,17 +84,47 @@ unpublished,techreport,misc,book]
 	
 \textit{The authors have made some improvements to the manuscript based on the feedback provided, however some concerns were not fully addressed, as described below. I will use the same number scheme as in the prior report for consistency. I am content with the response for points that are not re-addressed below.}
 
-We thank the referee for carefully reading our manuscript and providing valuable feedback and suggestions. We have reviewed the referee's comments and made changes based on their suggestions. Below, we offer a point-to-point reply to each of the referee's comments and include the changes made in the manuscript. The referee's comments are in italics, and our replies are in plain black. Changes in the manuscript are highlighted in orange.
+We thank the referee for carefully reading our manuscript and providing valuable feedback and suggestions. We have reviewed the referee's comments and made changes based on their suggestions. Below, we offer a point-to-point reply to each of the referee's comments and include the changes made in the manuscript. The referee's comments are in italics, and our replies are in plain black. Changes in the manuscript are highlighted in magenta.
 
 
 \begin{enumerate}
-	\item[$\bullet$] \textit{While I appreciate the inclusion of two additional force datasets, no new droplet shape profiles were included. For a paper that has a significant experimental component, I am surprised with the lack of direct visualization of the droplet dynamics. At minimum, I would recommend adding droplet shape profile comparisons for the two new data sets. Furthermore, these visualizations (including the one already included) should include a scale bar. Additionally, I would suggest including some experimental videos as supplementary materials.}
+	\item[$\bullet$] \textit{While I appreciate the inclusion of two additional force datasets, no new droplet shape profiles were included. For a paper that has a significant experimental component, I am surprised with the lack of direct visualization of the droplet dynamics. At minimum, I would recommend adding droplet shape profile comparisons for the two new data sets. Furthermore, these visualizations (including the one already included) should include a scale bar. Additionally, I would suggest including some experimental videos as supplementary materials.}\\[2mm]
 	
-	\red{Please send me the experimental images for the two case: Oh = 0.0625 and 0.2. I think I have the videos already but not the raw images. Please send them.}
+	We have modified figure~2 of the main text (see figure~\ref{fig:summary}) to include direct visualization of the droplet dynamics. We have also added three supplementary videos: SM1-SM3. 
 	
-	\item[$\bullet$] \textit{2. I appreciate the clarification regarding the error bars. However, a proper characterization (and description of the procedure by which they are determined) of the estimated parametric errors is still incomplete. Rather than including additional discussion, the authors reference the supplementary materials of a prior work (Zhang et al. (2022)). In reviewing this work, I cannot identify error assessments on key parameters (such as impact velocity). An error is now included on the droplet size, but there is no discussion of how drop size is determined nor how this error determined. Additionally, the related point regarding horizontal error bars was not addressed. Given that there is no length limit, I would suggest the authors include all details in the present manuscript rather than referring to incomplete discussions in prior work. (Also a minor point: the new horizontal line associated with the force sensor resolution should be described in the caption.)}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{../Main/Figures/Figure1_summary_v6.pdf}
+		\caption{{\oo Comparison of the drop impact force $F(t)$ obtained from experiments and simulations for the three typical cases with impact velocity $V_0 = 1.2\,\si{\meter}/\si{\second}, 0.97\,\si{\meter}/\si{\second}, 0.96\,\si{\meter}/\si{\second}$, diameter $D_0 = 2.05\,\si{\milli\meter}, 2.52\,\si{\milli\meter}, 2.54\,\si{\milli\meter}$, surface tension $\gamma = 72\,\si{\milli\newton}/\si{\meter}, 61\,\si{\milli\newton}/\si{\meter}, 61\,\si{\milli\newton}/\si{\meter}$ and viscosity $\eta_d = 1\,\si{\milli\pascal\second}, 25.3\,\si{\milli\pascal\second}, 80.2\,\si{\milli\pascal\second}$. These parameter give $Oh = 0.0025, 0.0625, 0.2$ and $We = 40$.
+				For the three cases, the two peak amplitudes, $F_1/\rho_dV_0^2D_0^2 \approx$ 0.82, 0.92, 0.99 at $t_1 \approx 0.03\sqrt{\rho_dD_0^3/\gamma}$ and $F_2/\rho_dV_0^2D_0^2 \approx$ 0.37, 0.337, 0.1 at $t_2 \approx 0.42\sqrt{\rho_dD_0^3/\gamma}$, characterize the inertial shock from impact and the Worthington jet before takeoff, respectively. 
+				The drop reaches the maximum spreading at $t_{\text{max}}$ when it momentarily stops and retracts until $0.8\sqrt{\rho_dD_0^3/\gamma}$ when the drop takes off ($F = 0$). The black and gray dashed lines in panel (a) mark $F = 0$ and the resolution $F = 0.5\,\si{\milli\newton}$ of our piezoelectric force transducer, respectively.
+				(b) Four instances are further elaborated through numerical simulations for ($We = 40, Oh = 0.0025$), namely (i) $t = 0\,\si{\milli\second}$ (touch-down), (ii) $t = 0.37\,\si{\milli\second}$ ($t_1$), (iii) $t = 2.5\,\si{\milli\second}$ ($t_{\text{max}}$), and (iv) $t = 4.63\,\si{\milli\second}$ ($t_2$).
+				The insets of panel (a) exemplify these four instances for the three representative cases illustrated here. The experimental snapshots are overlaid with the drop boundaries from simulations. 
+				We stress the excellent agreement between experiments and simulations without any free parameters.
+				The left part of each numerical snapshot shows the dimensionless local viscous dissipation function $\tilde{\xi}_\eta \equiv \xi_\eta D_0/\left(\rho_dV_0^3\right) = 2Oh\left(\boldsymbol{\tilde{\mathcal{D}}:\tilde{\mathcal{D}}}\right)$, where, $\boldsymbol{\mathcal{D}}$ is the symmetric part of the velocity gradient tensor, on a $\log_{10}$ scale and the right part the velocity field magnitude normalized with the impact velocity. The black velocity vectors are plotted in the center of mass reference frame of the drop to clearly elucidate the internal flow. Also see supplementary videos SM1-SM3.\bb}}
+		\label{fig:summary}
+	\end{figure}
 	
-	\red{Perhaps we add some numbers for the error bar here. Honestly, I think we already have the data needed for reproducing the results. We are not doing anything non-standard. Right?}
+	
+	
+	\item[$\bullet$] \textit{2. I appreciate the clarification regarding the error bars. However, a proper characterization (and description of the procedure by which they are determined) of the estimated parametric errors is still incomplete. Rather than including additional discussion, the authors reference the supplementary materials of a prior work (Zhang et al. (2022)). In reviewing this work, I cannot identify error assessments on key parameters (such as impact velocity). An error is now included on the droplet size, but there is no discussion of how drop size is determined nor how this error determined. Additionally, the related point regarding horizontal error bars was not addressed. Given that there is no length limit, I would suggest the authors include all details in the present manuscript rather than referring to incomplete discussions in prior work. (Also a minor point: the new horizontal line associated with the force sensor resolution should be described in the caption.)}\\[2mm]
+	
+	We appreciate the reviewer's insistence on a comprehensive error characterization. We have addressed this concern by adding a new appendix to the manuscript, titled ``Note on the experimental error characterization". We have also modified the caption of figure~2 of the main text (see figure~\ref{fig:summary}).  
+	
+	\oo
+	Throughout the manuscript, the error bars account for repeated trials and are visible if they are larger than the marker size. We refer the readers to the supplementary material of \citet{zhang2022impact}  and appendix~B for further details of the experimental setup and error characterization of the dimensionless control parameters, respectively.
+	
+	\section*{Appendix B. Note on the experimental error characterization}
+	\label{app:error}
+	
+	This appendix outlines the methodology for characterizing experimental errors in quantification of the drop's size and impact velocities which is crucial for accurate calculation of dimensionless control parameters, $We$ and $Oh$.
+	The drop diameter determination involved multiple steps. First, we measured the total mass ($M_{100}$) of 100 drops using an electric balance. From this mass, the drop density, and assuming spherical shape, we calculated the drop diameter ($D_0$). We repeated this process five times, yielding $D_{0,1}$ through $D_{0,5}$. The average of these measurements provided the final drop diameter ($D_0$) and its standard error.
+	For impact velocity determination, we extracted data from experimental high-speed imagery. By tracking the drop center's position in successive frames prior to substrate contact, and knowing the frame rate, we calculated the impact velocity. We repeated this process for five trials, obtaining $V_{0,1}$ through $V_{0,5}$. The average of these values gave the final impact velocity ($V_0$) and its standard error.
+	
+	The standard errors for drop diameters did not exceed $0.13\,\si{\milli\meter}$. For drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$, the diameters were $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. 
+	The standard errors for impact velocities did not exceed $0.02\,\si{\meter}/\si{\second}$. For the same Oh values, the impact velocities were $1.2 \pm 0.002\,\si{\meter}/\si{\second}$, $0.97 \pm 0.01\,\si{\meter}/\si{\second}$, and $0.96 \pm 0.01\,\si{\meter}/\si{\second}$, respectively.
+	The combined errors in $D_0$ and $V_0$ resulted in approximately $\pm 7\%$ error in Weber number $We$ and $\pm 3\%$ error in Ohnesorge number $Oh$. Consequently, the horizontal error bars, which relate to errors in the control parameters, are smaller than the symbol sizes in our figures.
+	\bb
 	
 	\item[$\bullet$] \textit{3.}
 	\begin{itemize}
