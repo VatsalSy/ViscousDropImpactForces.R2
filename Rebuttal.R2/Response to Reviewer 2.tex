@@ -116,12 +116,12 @@ We thank the referee for carefully reading our manuscript and providing valuable
 	
 	\section*{Appendix A. Note on the experimental error characterization}
 	\label{app:error}
-	
 	This appendix outlines the methodology for characterizing experimental errors in quantification of the drop's size and impact velocities which is crucial for accurate calculation of dimensionless control parameters, $We$ and $Oh$.
-	The drop diameter determination involved multiple steps. First, we measured the total mass ($M_{100}$) of 100 drops using an electric balance. From this mass, the drop density, and assuming spherical shape, we calculated the drop diameter ($D_0$). We repeated this process five times, yielding $D_{0,1}$ through $D_{0,5}$. The average of these measurements provided the final drop diameter ($D_0$) and its standard error.
+	The drop diameter determination involves multiple steps. First, we measure the total mass ($M_{100}$) of 100 drops using an electric balance. From this mass, using the liquid density and assuming spherical shape, we calculated the drop diameter ($D_0$). 
+	We repeated this process five times, yielding $D_{0,1}$ through $D_{0,5}$. The average of these measurements provided the final drop diameter ($D_0$) and its standard error.
 	For impact velocity determination, we extracted data from experimental high-speed imagery. By tracking the drop center's position in successive frames prior to substrate contact, and knowing the frame rate, we calculated the impact velocity. We repeated this process for five trials, obtaining $V_{0,1}$ through $V_{0,5}$. The average of these values gave the final impact velocity ($V_0$) and its standard error.
 	
-	The standard errors for drop diameters did not exceed $0.13\,\si{\milli\meter}$. For drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$, the diameters were $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. 
+	The standard errors for drop diameters do not exceed $0.13\,\si{\milli\meter}$. For instance, drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$ have diameters of $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. 
 	The standard errors for impact velocities did not exceed $0.02\,\si{\meter}/\si{\second}$. For the same Oh values, the impact velocities were $1.2 \pm 0.002\,\si{\meter}/\si{\second}$, $0.97 \pm 0.01\,\si{\meter}/\si{\second}$, and $0.96 \pm 0.01\,\si{\meter}/\si{\second}$, respectively.
 	The combined errors in $D_0$ and $V_0$ resulted in approximately $\pm 7\%$ error in Weber number $We$ and $\pm 3\%$ error in Ohnesorge number $Oh$. Consequently, the horizontal error bars, which relate to errors in the control parameters, are smaller than the symbol sizes in our figures.
 	\bb
@@ -131,17 +131,24 @@ We thank the referee for carefully reading our manuscript and providing valuable
 		\renewcommand\labelitemi{--}
 		\item \textit{In the experimental methods, the authors now describe that the Bond number is fixed at 1. Given the change in fluid properties between different solutions (with fixed droplet size), this cannot be the case. This needs to be made more precise. Furthermore, in the authors' prior work (Zhang et al. (2022)), it is mentioned that the Bo is fixed at 0.5 in simulation for similar experimental parameters. Why the change?}
 		
-		\VS{To discuss: The results are Bond invariant in the leading order. Therefore, we chose a representative value of Bond = 1: this if for a diameter $0.00256\,\si{\milli\meter}$, density $1000\,\si{\kilogram/\meter^3}$, acceleration due to gravity $10\,\si{\meter/\second^2}$, surface tension $0.06\,\si{\newton/\meter}$. The dimensionless number that matter is the Froude number $Fr = V^2/gD_0 = We/Bo$ which is larger than 1 throughout the paper. The difference as compared to \citet{zhang2022impact} is in the length scale (2 mm in PRL and 2.56 mm in this work).} 
+
 		
 		\item \textit{By now providing the drop size used, the Oh and Bo now can be used to define the parameters. However, it is not clear that the non-dimensional values are correct. For instance, Figures 2 and 3 both mention experimental conditions where Oh = 0.0025 whereas apparently different droplet sizes were used (2.05 mm in Figure 2, and 2.54 mm in Figure 3). Was a different fluid used between these figures such that the Oh could be held fixed? To clarify all of these issues, and for the ease of the readers, I strongly suggest the authors add the dimensional parameters for all experiments to the captions (as they have now done for Figure 2), an appendix, or make experimental data available in a supplementary data set.}	
 		
 		\item \textit{Given the significant amount of data overlap in the various figures (e.g. Figure 3(b)), I am more convinced now that the parameters and raw data need to be provided in a supplementary dataset for reproducibility and to facilitate further comparisons.}\\[2mm]
 		
+		Drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$ have diameters of $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. We share reviewer's assertion that it would be a great idea to share all the experimental data. We have revised our GitHub repository to include this information. We will make it available using Zenodo. 
 		
 		
-		\item \textit{The authors mention that their mixtures maintain ``a fairly constant surface tension and density, around 61 mN/m and 1000 kg/m$^3$, respectively.'' Since the values are now clearly specified in the table now, what is the meaning of these particular characteristic values which do in fact vary by around 20\%?}
+		\item \textit{The authors mention that their mixtures maintain ``a fairly constant surface tension and density, around 61 mN/m and 1000 kg/m$^3$, respectively.'' Since the values are now clearly specified in the table now, what is the meaning of these particular characteristic values which do in fact vary by around 20\%?}\\[2mm]
 		
-		\VS{We can rephrase to address this. I will take care.}
+		We thank the reviewer for bringing this to our attention and acknowledge that our original statement could be more precise
+		To address this concern, we have revised the text to provide a more accurate description of the property variations:
+				
+		\S~\red{2.1:}\\
+		\oo
+		The properties of the impacting drop are controlled using water-glycerol mixtures with viscosities $\eta_d$ varying by almost two orders of magnitude, from $1\,\si{\milli\pascal}\si{\second}$ to $80.2\,\si{\milli\pascal}\si{\second}$. Surface tension is either $72,\si{\milli\newton}/\si{\meter}$ (pure water) or $61,\si{\milli\newton}/\si{\meter}$ (glycerol), while density $\rho_d$ ranges from $1000,\si{\kilo\gram}/\si{\cubic\meter}$ to $1220,\si{\kilo\gram}/\si{\cubic\meter}$, as detailed in table~1 \citep{cheng2008formula, volk2018density, Jha2020}.
+		\bb
 	\end{itemize}
 	
 	\item[$\bullet$] \textit{5. The new title is more appropriate, but it should be mentioned in the title that there are specific restrictions/assumptions on the substrate (i.e. non-wetting), as the results are likely to depend on the surface wettability.}
@@ -157,11 +164,14 @@ We thank the referee for carefully reading our manuscript and providing valuable
 	Yes, using smaller radii could also allow for larger $Oh$. We have added this in the revised manuscript. 
 	
 	\S~\red{2.1:}\\
-	\VS{We note that using liquids such as silicone oil can provide a broader range of viscosity variation when paired with a superamphiphobic substrate \citep{deng2012candle}. Additionally, employing drops of smaller radii facilitates the exploration of higher Ohnesorge numbers ($Oh$).}
+	\oo 
+	We note that using liquids such as silicone oil can provide a broader range of viscosity variation when paired with a superamphiphobic substrate \citep{deng2012candle}. Additionally, employing drops of smaller radii facilitates the exploration of higher Ohnesorge numbers ($Oh$, see~1.2). 
+	The drop diameter $D_0$ is controlled between $2.05\,\si{\milli\meter}$ and $2.76\,\si{\milli\meter}$ by pushing it through a calibrated needle (see appendix~A for details). 
+	Consequently, we calculate $Oh$ using the properties in table~1.\bb
 	
 	\item[$\bullet$] \textit{13. While the authors have done a good job clarifying their theoretical arguments, I am not sure that citation to unpublished (and currently inaccessible) work by the same group is appropriate or really necessary.}
 	
-	We now cite the accessible version of this work: 
+	We now cite the accessible version of this work: \citet{sanjay2024PRL}.
 	
 \end{enumerate}
 
