@@ -111,6 +111,7 @@ We thank the referee for carefully reading our manuscript and providing valuable
 	
 	We appreciate the reviewer's insistence on a comprehensive error characterization. We have addressed this concern by adding a new appendix to the manuscript, titled ``Note on the experimental error characterization". We have also modified the caption of figure~2 of the main text (see figure~\ref{fig:summary}).  
 	
+	\S~\red{2.1:}\\
 	\oo
 	Throughout the manuscript, the error bars account for repeated trials and are visible if they are larger than the marker size. We refer the readers to the supplementary material of \citet{zhang2022impact}  and appendix~A for further details of the experimental setup and error characterization of the dimensionless control parameters, respectively.
 	
@@ -129,20 +130,58 @@ We thank the referee for carefully reading our manuscript and providing valuable
 	\item[$\bullet$] \textit{3.}
 	\begin{itemize}
 		\renewcommand\labelitemi{--}
-		\item \textit{In the experimental methods, the authors now describe that the Bond number is fixed at 1. Given the change in fluid properties between different solutions (with fixed droplet size), this cannot be the case. This needs to be made more precise. Furthermore, in the authors' prior work (Zhang et al. (2022)), it is mentioned that the Bo is fixed at 0.5 in simulation for similar experimental parameters. Why the change?}
+		\item \textit{In the experimental methods, the authors now describe that the Bond number is fixed at 1. Given the change in fluid properties between different solutions (with fixed droplet size), this cannot be the case. This needs to be made more precise. Furthermore, in the authors' prior work (Zhang et al. (2022)), it is mentioned that the Bo is fixed at 0.5 in simulation for similar experimental parameters. Why the change?}\\[1mm]
 		
+		We appreciate the reviewer's comment regarding the Bond number. 
+		The reviewer is correct in pointing out the inconsistency, and we apologize for any confusion this may have caused. We would like to clarify and expand on this point:
 
+		\begin{enumerate}
+			\item \textbf{Experimental Bond number range:}
+			Indeed, given the variation in fluid properties and drop sizes used in our experiments, the Bond number is not strictly fixed at 1. 
+			\item \textbf{Simulation Bond number:}
+			In our simulations, we chose to use a fixed Bond number of 1 as a representative value. This choice was made to simplify the parameter space and focus on the effects of Weber and Ohnesorge numbers. We have added a new appendix (Appendix B) to address this point and demonstrate the validity of this approach. We have also expanded our discussion in Appendix B to justify our approach and discuss its implications.
+			\item \textbf{Difference from previous work:}
+			The reviewer correctly notes that in our previous work \citep{zhang2022impact}, we used a fixed Bond number of 0.5 in simulations. The change to Bo = 1 in the current work was made to better represent the average experimental conditions. However, as our sensitivity analysis shows, this change does not significantly affect our results or conclusions.
+		\end{enumerate}		
+		
+		\S~\red{2.2:}\\
+		\oo
+		Lastly, we keep the Bond number ($Bo$, see~(1.3)) fixed at 1 throughout the manuscript. In our system, the relevance of gravity is characterized by the dimensionless Froude number $Fr = V_0^2/gD_0 = We/Bo$ comparing inertia with gravity. Throughout this manuscript, $Fr > 1$ and gravity's role is sub-dominant compared to inertia (for detailed discussion, see appendix~B).
+		\bb
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{../main/Figures/figureA1.pdf}
+			\caption{{\oo Comparison of the drop impact force $F(t)$ obtained from simulations for the four different Bond numbers $Bo = 0, 0.5, 1, 1.25$. Here, $Oh = 0.06$ and $We = 40$. Both force peaks $F_1$ and $F_2$ as well as time to reach these peaks $t_1$ and $t_2$ are invariant to variation in $Bo$. \bb}}
+			\label{fig:AppGravity}
+		\end{figure}
+		
+		\oo 
+		
+		\section*{Appendix B. Role of gravity on drop impact forces}
+		\label{app:gravity}
+		
+		Following table~1 and considering the variation in impacting drop diameter (appendix~B), the Bond number (equation~(1.3)) in our experiments ranges from $0.5$ to $1.25$, introducing an additional dimensionless control parameter alongside $We$ and $Oh$. 
+		Gravity typically plays a negligible role in these impact processes \citep{sanjay_chantelot_lohse_2023,sanjay2024PRL}. We undertook a sensitivity test varying the Bond number from $0$ to $1.25$ in our simulations. 
+		Figure~\ref{fig:AppGravity} confirms the leading-order Bond invariance of the results as the impact force profiles, including both force peaks $F_1$ and $F_2$ and their corresponding times $t_1$ and $t_2$, remain invariant to these Bond number variations.
+		Notably, while gravity does play a role in drop impact dynamics, particularly for longer time scales and in determining the critical Ohnesorge number $Oh_c$ for bouncing inhibition (see figure~10b and \citet{sanjay_chantelot_lohse_2023}), its effect on the initial impact force peaks is minimal for the parameter range studied here (large Froude numbers, $Fr > 1$). This Bond number invariance allows us to focus on the more dominant effects of Weber and Ohnesorge numbers.
+		Consequently, we selected a representative value of $Bo = 1$, corresponding to a diameter of $0.00254\,\si{\milli\meter}$, density $1000\,\si{\kilogram/\meter^3}$, gravitational acceleration $10\,\si{\meter/\second^2}$, and surface tension $0.061\,\si{\newton/\meter}$. 
+		\bb
 		
 		\item \textit{By now providing the drop size used, the Oh and Bo now can be used to define the parameters. However, it is not clear that the non-dimensional values are correct. For instance, Figures 2 and 3 both mention experimental conditions where Oh = 0.0025 whereas apparently different droplet sizes were used (2.05 mm in Figure 2, and 2.54 mm in Figure 3). Was a different fluid used between these figures such that the Oh could be held fixed? To clarify all of these issues, and for the ease of the readers, I strongly suggest the authors add the dimensional parameters for all experiments to the captions (as they have now done for Figure 2), an appendix, or make experimental data available in a supplementary data set.}	
 		
 		\item \textit{Given the significant amount of data overlap in the various figures (e.g. Figure 3(b)), I am more convinced now that the parameters and raw data need to be provided in a supplementary dataset for reproducibility and to facilitate further comparisons.}\\[1mm]
 		
-		Drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$ have diameters of $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. We share reviewer's assertion that it would be a great idea to share all the experimental data. We have revised our GitHub repository to include this information. We will make it available using Zenodo. 
+		We appreciate the reviewer's suggestion to clarify all the experimental data, and we have taken steps to address this. In our experiments, drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$ have diameters of $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. We have now added a discussion in the new appendix, titled ``Note on the experimental error characterization". 
+		We also share reviewer's assertion that it would be a great idea to share all the experimental data. We have revised our GitHub repository to include this information. We have made it available using Zenodo, see \citet{basiliskVatsal}.
 		
+		\oo
+		\noindent{\bf  Code availability\bf{.}} The codes used in the present article and the parameters and data to reproduce figures~3 and~7 are permanently available at \citet{basiliskVatsal}.\\
+		\bb
 		
 		\item \textit{The authors mention that their mixtures maintain ``a fairly constant surface tension and density, around 61 mN/m and 1000 kg/m$^3$, respectively.'' Since the values are now clearly specified in the table now, what is the meaning of these particular characteristic values which do in fact vary by around 20\%?}\\[1mm]
 		
-		We thank the reviewer for bringing this to our attention and acknowledge that our original statement could be more precise
+		We thank the reviewer for bringing this to our attention and acknowledge that our original statement needed improvement.
 		To address this concern, we have revised the text to provide a more accurate description of the property variations:
 				
 		\S~\red{2.1:}\\
@@ -168,7 +207,7 @@ We thank the referee for carefully reading our manuscript and providing valuable
 	
 	\S~\red{2.2:}\\
 	\oo
-	It is important to note that experimental drops may deviate from perfect sphericity due to air drag post-needle release and potential residual oscillations from detachment. These shape perturbations are more pronounced in cases with low Weber and Ohnesorge numbers. To quantify this non-sphericity, we measure the drop's aspect ratio (horizontal to vertical diameter) immediately before substrate contact. The precise pre-impact drop shape can significantly influence subsequent impact dynamics \citep{thoraval-2013-jfm, yun2017bouncing,Zhang2019}. In our experiments, we constrain our analysis to drops with aspect ratios between 0.96 and 1.05. Given this narrow range, we posit that the impact of these shape variations is negligible compared to the experimental error bars derived from repeated trials under identical nominal conditions.
+	It is important to note that experimental drops may deviate from perfect sphericity due to air drag as they fall after detaching from the needle and potential residual oscillations from detachment. These shape perturbations are more pronounced in cases with low Weber and Ohnesorge numbers. To quantify this non-sphericity, we measure the drop's aspect ratio (horizontal to vertical diameter) immediately before substrate contact. The precise pre-impact drop shape can significantly influence subsequent impact dynamics \citep{thoraval-2013-jfm, yun2017bouncing,Zhang2019}. In our experiments, we constrain our analysis to drops with aspect ratios between 0.96 and 1.05. Given this narrow range, we posit that the impact of these shape variations is negligible compared to the experimental error bars derived from repeated trials under identical nominal conditions.
 	\bb
 	
 	\item[$\bullet$] \textit{11. While moving to a different fluid is one viable option, using smaller radii could also allow for smaller $Oh$.}
