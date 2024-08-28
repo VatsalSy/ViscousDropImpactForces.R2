@@ -88,7 +88,7 @@ We thank the referee for carefully reading our manuscript and providing valuable
 
 
 \begin{enumerate}
-	\item[$\bullet$] \textit{While I appreciate the inclusion of two additional force datasets, no new droplet shape profiles were included. For a paper that has a significant experimental component, I am surprised with the lack of direct visualization of the droplet dynamics. At minimum, I would recommend adding droplet shape profile comparisons for the two new data sets. Furthermore, these visualizations (including the one already included) should include a scale bar. Additionally, I would suggest including some experimental videos as supplementary materials.}\\[2mm]
+	\item[$\bullet$] \textit{While I appreciate the inclusion of two additional force datasets, no new droplet shape profiles were included. For a paper that has a significant experimental component, I am surprised with the lack of direct visualization of the droplet dynamics. At minimum, I would recommend adding droplet shape profile comparisons for the two new data sets. Furthermore, these visualizations (including the one already included) should include a scale bar. Additionally, I would suggest including some experimental videos as supplementary materials.}\\[1mm]
 	
 	We have modified figure~2 of the main text (see figure~\ref{fig:summary}) to include direct visualization of the droplet dynamics. We have also added three supplementary videos: SM1-SM3. 
 	
@@ -107,7 +107,7 @@ We thank the referee for carefully reading our manuscript and providing valuable
 	
 	
 	
-	\item[$\bullet$] \textit{2. I appreciate the clarification regarding the error bars. However, a proper characterization (and description of the procedure by which they are determined) of the estimated parametric errors is still incomplete. Rather than including additional discussion, the authors reference the supplementary materials of a prior work (Zhang et al. (2022)). In reviewing this work, I cannot identify error assessments on key parameters (such as impact velocity). An error is now included on the droplet size, but there is no discussion of how drop size is determined nor how this error determined. Additionally, the related point regarding horizontal error bars was not addressed. Given that there is no length limit, I would suggest the authors include all details in the present manuscript rather than referring to incomplete discussions in prior work. (Also a minor point: the new horizontal line associated with the force sensor resolution should be described in the caption.)}\\[2mm]
+	\item[$\bullet$] \textit{2. I appreciate the clarification regarding the error bars. However, a proper characterization (and description of the procedure by which they are determined) of the estimated parametric errors is still incomplete. Rather than including additional discussion, the authors reference the supplementary materials of a prior work (Zhang et al. (2022)). In reviewing this work, I cannot identify error assessments on key parameters (such as impact velocity). An error is now included on the droplet size, but there is no discussion of how drop size is determined nor how this error determined. Additionally, the related point regarding horizontal error bars was not addressed. Given that there is no length limit, I would suggest the authors include all details in the present manuscript rather than referring to incomplete discussions in prior work. (Also a minor point: the new horizontal line associated with the force sensor resolution should be described in the caption.)}\\[1mm]
 	
 	We appreciate the reviewer's insistence on a comprehensive error characterization. We have addressed this concern by adding a new appendix to the manuscript, titled ``Note on the experimental error characterization". We have also modified the caption of figure~2 of the main text (see figure~\ref{fig:summary}).  
 	
@@ -135,12 +135,12 @@ We thank the referee for carefully reading our manuscript and providing valuable
 		
 		\item \textit{By now providing the drop size used, the Oh and Bo now can be used to define the parameters. However, it is not clear that the non-dimensional values are correct. For instance, Figures 2 and 3 both mention experimental conditions where Oh = 0.0025 whereas apparently different droplet sizes were used (2.05 mm in Figure 2, and 2.54 mm in Figure 3). Was a different fluid used between these figures such that the Oh could be held fixed? To clarify all of these issues, and for the ease of the readers, I strongly suggest the authors add the dimensional parameters for all experiments to the captions (as they have now done for Figure 2), an appendix, or make experimental data available in a supplementary data set.}	
 		
-		\item \textit{Given the significant amount of data overlap in the various figures (e.g. Figure 3(b)), I am more convinced now that the parameters and raw data need to be provided in a supplementary dataset for reproducibility and to facilitate further comparisons.}\\[2mm]
+		\item \textit{Given the significant amount of data overlap in the various figures (e.g. Figure 3(b)), I am more convinced now that the parameters and raw data need to be provided in a supplementary dataset for reproducibility and to facilitate further comparisons.}\\[1mm]
 		
 		Drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$ have diameters of $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. We share reviewer's assertion that it would be a great idea to share all the experimental data. We have revised our GitHub repository to include this information. We will make it available using Zenodo. 
 		
 		
-		\item \textit{The authors mention that their mixtures maintain ``a fairly constant surface tension and density, around 61 mN/m and 1000 kg/m$^3$, respectively.'' Since the values are now clearly specified in the table now, what is the meaning of these particular characteristic values which do in fact vary by around 20\%?}\\[2mm]
+		\item \textit{The authors mention that their mixtures maintain ``a fairly constant surface tension and density, around 61 mN/m and 1000 kg/m$^3$, respectively.'' Since the values are now clearly specified in the table now, what is the meaning of these particular characteristic values which do in fact vary by around 20\%?}\\[1mm]
 		
 		We thank the reviewer for bringing this to our attention and acknowledge that our original statement could be more precise
 		To address this concern, we have revised the text to provide a more accurate description of the property variations:
@@ -153,11 +153,23 @@ We thank the referee for carefully reading our manuscript and providing valuable
 	
 	\item[$\bullet$] \textit{5. The new title is more appropriate, but it should be mentioned in the title that there are specific restrictions/assumptions on the substrate (i.e. non-wetting), as the results are likely to depend on the surface wettability.}
 	
-	\blue{The first impact peak is independent of wetability. The second peak, of course, depends on wetability as it only shows up on non-wetting surfaces. Any suggestions?}
+	We appreciate the reviewer's suggestion regarding the title. While we understand the importance of highlighting specific assumptions, we believe the current title strikes an appropriate balance between conciseness and informativeness. Nevertheless, we would like to address the reviewer's concern by elaborating on our reasoning:
 	
-	\item[$\bullet$] \textit{7. If the experiment is repeatable, for a given drop height, the oscillation phase at which the droplet arrives at the surface should not vary, and thus is unlikely to be captured by the error bars as claimed. Some additional quantification of the non-sphericity of the droplets should be included.}
+	\begin{enumerate}
+		\item \textbf{Generality of the first impact peak:} As demonstrated in the supplementary information of \citet{zhang2022impact}, the first impact peak is independent of surface wettability. 
+		\item \textbf{Early disclosure of surface properties:} We explicitly mention the non-wetting nature of the surface in the second line of the abstract. This ensures that readers are immediately aware of this crucial experimental condition without overburdening the title.
+	\end{enumerate}
 	
-	\red{What to do? There are other more detailed works on impact of non-sphericity. Mostly, they show that the things do not depend on whether the drop is prolate or oblate... At least not in the leading order. Also see: \citet{sanjay2023drop}.}
+	We acknowledge that the second peak is indeed dependent on surface wettability. However, this specific aspect is thoroughly discussed within the paper, and we believe it does not warrant inclusion in the title.
+	
+	\item[$\bullet$] \textit{7. If the experiment is repeatable, for a given drop height, the oscillation phase at which the droplet arrives at the surface should not vary, and thus is unlikely to be captured by the error bars as claimed. Some additional quantification of the non-sphericity of the droplets should be included.}\\[1 mm]
+	
+	The reviewer is correct that for a given drop height, the oscillation phase should be consistent if all other factors remain constant. In our experiments, we constrain our analysis to drops with aspect ratios (horizontal to vertical diameter) between 0.96 and 1.05. Given this narrow range, we posit that the impact of these shape variations is negligible compared to the experimental error bars derived from repeated trials under identical nominal conditions. We have modified the text to address this point and provide additional quantification of the non-sphericity of the droplets as suggested by the reviewer: 
+	
+	\S~\red{2.2:}\\
+	\oo
+	It is important to note that experimental drops may deviate from perfect sphericity due to air drag post-needle release and potential residual oscillations from detachment. These shape perturbations are more pronounced in cases with low Weber and Ohnesorge numbers. To quantify this non-sphericity, we measure the drop's aspect ratio (horizontal to vertical diameter) immediately before substrate contact. The precise pre-impact drop shape can significantly influence subsequent impact dynamics \citep{thoraval-2013-jfm, yun2017bouncing,Zhang2019}. In our experiments, we constrain our analysis to drops with aspect ratios between 0.96 and 1.05. Given this narrow range, we posit that the impact of these shape variations is negligible compared to the experimental error bars derived from repeated trials under identical nominal conditions.
+	\bb
 	
 	\item[$\bullet$] \textit{11. While moving to a different fluid is one viable option, using smaller radii could also allow for smaller $Oh$.}
 	
