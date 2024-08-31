@@ -53,7 +53,7 @@ unpublished,techreport,misc,book]
 \usepackage{siunitx}
 \usepackage{xcolor}
 \usepackage{mathrsfs}
-\usepackage[colorlinks,citecolor=purple]{hyperref}
+\usepackage[colorlinks,citecolor=purple,urlcolor=blue]{hyperref}
 \newcommand*\blue{\textcolor{blue}}
 \newcommand*\red{\textcolor{red}}
 \newcommand{\VS}[1]{{\textcolor{orange}{#1}}}
@@ -137,11 +137,11 @@ We thank the referee for carefully reading our manuscript and providing valuable
 
 		\begin{enumerate}
 			\item \textbf{Experimental Bond number range:}
-			Indeed, given the variation in fluid properties and drop sizes used in our experiments, the Bond number is not strictly fixed at 1. 
+			Indeed, given the variation in fluid properties and drop sizes used in our experiments, the Bond number is not strictly fixed at 1, it only is $\mathcal{O}\left(1\right)$.
 			\item \textbf{Simulation Bond number:}
 			In our simulations, we chose to use a fixed Bond number of 1 as the representative value. This choice was made to simplify the parameter space and focus on the effects of Weber and Ohnesorge numbers. We have added a new appendix (Appendix B) to address this point and demonstrate the validity of this approach. We have also expanded our discussion in Appendix B to justify our approach and discuss its implications.
 			\item \textbf{Difference from previous work:}
-			The reviewer correctly notes that in our previous work \citep{zhang2022impact}, we used a fixed Bond number of 0.5 in simulations. The change to $Bo = 1$ in the current work was made to better represent the average experimental conditions. However, as our sensitivity analysis shows, this change does not significantly affect our results or conclusions.
+			The reviewer correctly notes that in our previous work \citep{zhang2022impact}, we used a fixed Bond number of 0.5 in simulations. The change to $Bo = 1$ in the current work was made to better represent the average experimental conditions. However, as our sensitivity analysis shows, this change hardly affects our results.
 		\end{enumerate}		
 		
 		\S~\red{2.2:}\\
@@ -172,8 +172,8 @@ We thank the referee for carefully reading our manuscript and providing valuable
 		
 		\item \textit{Given the significant amount of data overlap in the various figures (e.g. Figure 3(b)), I am more convinced now that the parameters and raw data need to be provided in a supplementary dataset for reproducibility and to facilitate further comparisons.}\\[1mm]
 		
-		We appreciate the reviewer's suggestion to clarify all the experimental data, and we have taken steps to address this. In our experiments, drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$ have diameters of $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. We have now added a discussion in the new appendix, titled ``Note on the error characterization for the control parameters". 
-		We also share reviewer's assertion that it would be a great idea to share all the experimental data. We have revised our GitHub repository to include this information. We have made it available using Zenodo, see \citet{basiliskVatsal}.
+		We appreciate the reviewer's suggestion to clarify all the experimental data, and we have now addressed this. In our experiments, drops with Ohnesorge numbers of $0.0025$, $0.0625$, and $0.2$ have diameters of $2.05 \pm 0.13\,\si{\milli\meter}$, $2.52 \pm 0.11\,\si{\milli\meter}$, and $2.54 \pm 0.09\,\si{\milli\meter}$, respectively. We have now added a discussion in the new appendix, titled ``Note on the error characterization for the control parameters". 
+		We also share reviewer's assertion that it would be a great idea to share all the experimental data. We have revised our GitHub repository to include this information. We have made it available using Zenodo, see \citet{basiliskVatsal}. We will also share the Jupyter notebook using JFM notebooks. 
 		
 		\oo
 		\noindent{\bf  Code availability\bf{.}} The codes used in the present article and the parameters and data to reproduce figures~3 and~7 are permanently available at \citet{basiliskVatsal}.\\
@@ -224,7 +224,7 @@ We thank the referee for carefully reading our manuscript and providing valuable
 	
 	\item[$\bullet$] \textit{13. While the authors have done a good job clarifying their theoretical arguments, I am not sure that citation to unpublished (and currently inaccessible) work by the same group is appropriate or really necessary.}
 	
-	We now cite the accessible version of this work: \citet{sanjay2024PRL}.
+	We now cite the accessible version of this work: \citet{sanjay2024PRL}. The paper is available at \href{https://doi.org/10.48550/arXiv.2408.12714}{https://doi.org/10.48550/arXiv.2408.12714}.
 	
 \end{enumerate}
 
