@@ -10,8 +10,8 @@
 
 %\usepackage[usenames,dvipsnames]{xcolor} % color package
 \usepackage{siunitx}
-\usepackage{lineno}
-\linenumbers
+%\usepackage{lineno}
+%\linenumbers
 
 %\usepackage{setspace}
 %\doublespacing
@@ -83,13 +83,13 @@
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/Schematic_v2.pdf}
+		\includegraphics[width=\textwidth]{Schematic_v2.pdf}
 		\caption{(a) Problem schematic with an axisymmetric computational domain used to study the impact of a drop with diameter $D_0$ and velocity $V_0$ on a non-wetting substrate. In the experiments, we use a quartz force sensor to measure the temporal variation of the impact force. The subscripts $d$ and $a$ denote the drop and air, respectively, to distinguish their material properties, which are the density $\rho$ and the dynamic viscosity $\eta$. The drop–air surface tension coefficient is $\gamma$. The grey dashed-dotted line represents the axis of symmetry, $r = 0$. Boundary air outflow is applied at the top and side boundaries (tangential stresses, normal velocity gradient, and ambient pressure are set to zero). The domain boundaries are far enough from the drop not to influence its impact process ($\mathcal{L}_\text{max} \gg D_0$, $\mathcal{L}_\text{max} = 8R$ in the worst case). (b) The phase space with control parameters: the Weber number ($We$: dimensionless kinetic energy) and the Ohnesorge number ($Oh$: dimensionless viscosity), exemplifying different applications.}
 		\label{fig:schematic}
 	\end{figure}
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/Figure1_summary_v6.pdf}
+		\includegraphics[width=\textwidth]{Figure1_summary_v6.pdf}
 		\caption{Comparison of the drop impact force $F(t)$ obtained from experiments and simulations for the three typical cases with impact velocity $V_0 = 1.2\,\si{\meter}/\si{\second}, 0.97\,\si{\meter}/\si{\second}, 0.96\,\si{\meter}/\si{\second}$, diameter $D_0 = 2.05\,\si{\milli\meter}, 2.52\,\si{\milli\meter}, 2.54\,\si{\milli\meter}$, surface tension $\gamma = 72\,\si{\milli\newton}/\si{\meter}, 61\,\si{\milli\newton}/\si{\meter}, 61\,\si{\milli\newton}/\si{\meter}$ and viscosity $\eta_d = 1\,\si{\milli\pascal\second}, 25.3\,\si{\milli\pascal\second}, 80.2\,\si{\milli\pascal\second}$. These parameter give $Oh = 0.0025, 0.06, 0.2$ and $We = 40$.
 			For the three cases, the two peak amplitudes, $F_1/(\rho_dV_0^2D_0^2) \approx$ 0.82, 0.92, 0.99 at $t_1 \approx 0.03\sqrt{\rho_dD_0^3/\gamma}$ and $F_2/(\rho_dV_0^2D_0^2) \approx$ 0.37, 0.337, 0.1 at $t_2 \approx 0.42\sqrt{\rho_dD_0^3/\gamma}$, characterize the inertial shock from impact and the Worthington jet before takeoff, respectively. 
 			The drop reaches the maximum spreading at $t_{\text{max}}$ when it momentarily stops and retracts until $0.8\sqrt{\rho_dD_0^3/\gamma}$ when the drop takes off ($F = 0$). The black and gray dashed lines in panel (a) mark $F = 0$ and the resolution $F = 0.5\,\si{\milli\newton}$ of our piezoelectric force transducer, respectively.
@@ -231,13 +231,13 @@
 	\subsection{Low Ohnesorge number impacts}\label{sec:FirstInertialPeak}
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/Force1_Anatomy_v2.pdf}
+		\includegraphics[width=\textwidth]{Force1_Anatomy_v2.pdf}
 		\caption{Anatomy of the first impact force peak amplitude at low $Oh$ in between 0.0025 and 0.2, see color legend: $We$ dependence of the (a) magnitude $F_1$ normalized by the inertial force scale $F_\rho = \rho_dV_0^2D_0^2$ and time $t_1$ to reach the first force peak amplitude normalized by (b) the inertial timescale $\tau_\rho = D_0/V_0$ and (c) the inertio-capillary time scale $\tau_\gamma = \sqrt{\rho_dD_0^3/\gamma}$.}
 		\label{fig:F1Anatomy}
 	\end{figure}
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/F1_Drops_LowOh_v2.pdf}
+		\includegraphics[width=\textwidth]{F1_Drops_LowOh_v2.pdf}
 		\caption{Direct numerical simulations snapshots illustrating the drop impact dynamics for $We$ = (a) 40 and (b) 2. The left-hand side of each numerical snapshot shows the pressure normalized by (a) the inertial pressure scale $\rho_dV_0^2$ and (b) the capillary pressure scale $\gamma/D_0$. The right-hand side shows the velocity field magnitude normalized by the impact velocity $V_0$.}
 		\label{fig:F1AnatomyLowOh}
 	\end{figure}
@@ -274,14 +274,14 @@
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/ForceTimeVersusOhnesorge.pdf}
+		\includegraphics[width=\textwidth]{ForceTimeVersusOhnesorge.pdf}
 		\caption{Anatomy of the first impact force peak amplitude for viscous impacts from our numerical simulations: the $Oh$ dependence of  (a) the magnitude $F_1$ normalized by the inertial force scale $\rho_dV_0^2D_0^2$ and (b) the time $t_1$ to reach the first force peak amplitude normalized by inertial timescale $\tau_\rho = D_0/V_0$. (c) The $Re$ dependence of the magnitude $F_1$ normalized by the inertial force scale $\rho_dV_0^2D_0^2$ as compared to the (implicit) theoretical calculation of \citet{Gordillo2018}. The black line corresponds to the scaling relationship described in \S\ref{sec:ViscousImpact}. The Weber number is color-coded.}
 		\label{fig:F1Anatomy_2}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/Figure3.2_F1_Drops.pdf}
+		\includegraphics[width=\textwidth]{Figure3.2_F1_Drops.pdf}
 		\caption{Direct numerical simulations snapshots illustrating the drop impact dynamics for $We = 100$ and $Oh$ = (a) 0.05, (b) 0.5, and (c) 5. The left-hand side of each numerical snapshot shows the viscous dissipation function $\xi_\eta$ normalized by the inertial scale $\rho_dV_0^3/D_0$. The right-hand side shows the velocity field magnitude normalized by the impact velocity $V_0$.}
 		\label{fig:QualitativeF1}
 	\end{figure}
@@ -376,21 +376,21 @@
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/Force2_Anatomy_v4.pdf}
+		\includegraphics[width=\textwidth]{Force2_Anatomy_v4.pdf}
 		\caption{Anatomy of the second impact force peak amplitude: $We$ dependence of the (a) magnitude $F_2$ normalized by the inertial force scale $F_\rho = \rho_dV_0^2D_0^2$ and time $t_2$ to reach the second force peak amplitude normalized by (b) the inertio-capillary time scale $\tau_\gamma = \sqrt{\rho_dD_0^3/\gamma}$ and (c) inertial timescale $\tau_\rho = D_0/V_0$.}
 		\label{fig:F2Anatomy}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/F2phenomenology.pdf}
+		\includegraphics[width=\textwidth]{F2phenomenology.pdf}
 		\caption{Direct numerical simulations snapshots illustrating the influence of $We$ and $Oh$ on the inception of the Worthington jet. All these snapshots are taken at the instant when the second peak appears in the temporal evolution of the normal reaction force ($t = t_2$). The left-hand side of each numerical snapshot shows the viscous dissipation function $\xi_\eta$ normalized by the inertial scale $\rho_dV_0^3/D_0$. The right-hand side shows the velocity field magnitude normalized by the impact velocity $V_0$. The gray velocity vectors are plotted in the center of mass reference frame of the drop to clearly elucidate the internal flow.}
 		\label{fig:F2Phenomenology}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/Figure4.3_F2_Drops.pdf}
+		\includegraphics[width=\textwidth]{Figure4.3_F2_Drops.pdf}
 		\caption{Direct numerical simulations snapshots illustrating the influence of $We$ and $Oh$ on the singular Worthington jet. (a) ($We, Oh$) = ($9, 0.0025$), (b) $Oh = 0.0025$ with $We$ = (i) $5$ and (ii) $12$, and (c) $We = 9$ with $Oh$ = (i) $0.005$ and (ii) $Oh = 0.05$. The left-hand side of each numerical snapshot shows the viscous dissipation function $\xi_\eta$ normalized by inertial scale $\rho_dV_0^3/D_0$. The right-hand side shows the velocity field magnitude normalized by the impact velocity $V_0$.}
 		\label{fig:KillSingularity}
 	\end{figure}
@@ -409,7 +409,7 @@
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/RegimeMaps_v3.pdf}
+		\includegraphics[width=\textwidth]{RegimeMaps_v3.pdf}
 		\caption{Regime map in terms of the drop Ohnesorge number $Oh$ and the impact Weber number $We$ to summarize the two peaks in the impact force by showing the different regimes described in this work based on (a) the first peak in the impact force peak amplitude $F_1$ and (b) the second peak in the impact force peak amplitude $F_2$. Both peaks are normalized by the inertial force scale $F_\rho = \rho_dV_0^2D_0^2$. These regime maps are constructed using $\sim 1500$ simulations in the range $0.001 \leq Oh \leq 100$ and $1 \leq We \leq 1000$. The gray solid line in (a) and dashed line in (b) mark the inertial--viscous transition ($Re = 1$) and the bouncing--no-bouncing transition \citep[$Oh_c = 0.53$ for $Bo = 1$, see][]{sanjay_chantelot_lohse_2023}, respectively.}
 		\label{fig:RegimeMaps}
 	\end{figure}
@@ -456,7 +456,7 @@
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{Figures/figureA1.pdf}
+		\includegraphics[width=\textwidth]{figureA1.pdf}
 		\caption{Comparison of the drop impact force $F(t)$ obtained from simulations for the four different Bond numbers $Bo = 0, 0.5, 1, 1.25$. Here, $Oh = 0.06$ and $We = 40$. Both force peaks $F_1$ and $F_2$ as well as time to reach these peaks $t_1$ and $t_2$ are invariant to variation in $Bo$.}
 		\label{fig:AppGravity}
 	\end{figure}
