@@ -6,6 +6,7 @@ ViscousDropImpact_v*.pdf
 .DS_Store
 */.DS_Store
 */*/.DS_Store
+**/DL*
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
